@@ -63,7 +63,7 @@ class strategi(QWidget):
 
 
     def doUbahStrategi(self):
-        f not self.formStrategi.editID.text().strip():
+        if not self.formStrategi.editID.text().strip():
             QMessageBox.information(None, "Informasi", "ID Strategi belum di isi. (Klik data dari tabel)")
             self.formStrategi.editID.setFocus()
             return
@@ -100,6 +100,19 @@ class strategi(QWidget):
 
     def tampilData(self):
         baris = self.crud.dataStrategi()
+        self.formStrategi.tabelStrategi.setRowCount(0)
+        for r in baris:
+            i = self.formStrategi.tabelStrategi.rowCount()
+            self.formStrategi.tabelStrategi.insertRow(i)
+            self.formStrategi.tabelStrategi.setItem(i,0, QTableWidgetItem(r ["id_strategi"]))
+            self.formStrategi.tabelStrategi.setItem(i,1, QTableWidgetItem(r ["id_regulasi"]))
+            self.formStrategi.tabelStrategi.setItem(i,2, QTableWidgetItem(r ["judul"]))
+            self.formStrategi.tabelStrategi.setItem(i,3, QTableWidgetItem(r ["tujuan"]))
+
+
+    def doCariStrategi(self):
+        cari = self.formStrategi.editCari.text()
+        baris = self.crud.doCariStrategi(cari)
         self.formStrategi.tabelStrategi.setRowCount(0)
         for r in baris:
             i = self.formStrategi.tabelStrategi.rowCount()

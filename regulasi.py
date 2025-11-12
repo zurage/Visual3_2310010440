@@ -21,7 +21,7 @@ class regulasi(QWidget):
         self.formRegulasi.btnUbah.clicked.connect(self.doUbahRegulasi)
         self.formRegulasi.btnHapus.clicked.connect(self.doHapusRegulasi)
         self.tampilData()
-        self.formStrategi.editCari.textChanged.connect(self.doCariRegulasi)
+        self.formRegulasi.editCari.textChanged.connect(self.doCariRegulasi)
 
     def doSimpanRegulasi(self):
         if not self.formRegulasi.editID.text().strip():
