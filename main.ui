@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main</class>
+ <widget class="QMainWindow" name="Main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Main</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHalaman">
+    <property name="title">
+     <string>Halaman</string>
+    </property>
+    <addaction name="actionAdmin"/>
+    <addaction name="actionProgram"/>
+    <addaction name="actionStrategi"/>
+    <addaction name="actionLembaga"/>
+    <addaction name="actionRegulasi"/>
+   </widget>
+   <addaction name="menuHalaman"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAdmin">
+   <property name="text">
+    <string>Admin</string>
+   </property>
+  </action>
+  <action name="actionLembaga">
+   <property name="text">
+    <string>Lembaga</string>
+   </property>
+  </action>
+  <action name="actionStrategi">
+   <property name="text">
+    <string>Strategi</string>
+   </property>
+  </action>
+  <action name="actionProgram">
+   <property name="text">
+    <string>Program</string>
+   </property>
+  </action>
+  <action name="actionRegulasi">
+   <property name="text">
+    <string>Regulasi</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
